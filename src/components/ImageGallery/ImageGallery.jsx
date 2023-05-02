@@ -97,7 +97,9 @@ class ImageGallery extends Component {
                 />
               ))}
             </Gallery>
-            {gallery.length < totalHits && <Button onClick={this.loadMore} />}
+            {gallery.length < totalHits && !loading && (
+              <Button onClick={this.loadMore} />
+            )}
           </>
         )}
 
